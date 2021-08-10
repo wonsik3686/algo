@@ -1,5 +1,5 @@
 // 22892kb			368ms
-package silver_14467;
+package silver_14467_소가길을건너간이유1;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

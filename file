@@ -1,0 +1,54 @@
+[33mcommit 0f046766c0487eb334191b75fb4f3ae38d557cbd[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: wonsik3686 <wonsic3686@gmail.com>
+Date:   Sun Aug 8 03:37:50 2021 +0900
+
+    Initial commit
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4fbcfec[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m.metadata/[m
+[32m+[m[32m.recommenders/[m
+[32m+[m[32m*/.settings/[m
+[32m+[m[32m*/bin/[m
+[32m+[m[32m*/.classpath[m
+[32m+[m[32m*/.project[m
+\ No newline at end of file[m
+[1mdiff --git a/BOJ/silver/silver_14467/BOJ_14467_소가길을건너간이유1.java b/BOJ/silver/silver_14467/BOJ_14467_소가길을건너간이유1.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..13cfbed[m
+[1m--- /dev/null[m
+[1m+++ b/BOJ/silver/silver_14467/BOJ_14467_소가길을건너간이유1.java[m
+[36m@@ -0,0 +1,29 @@[m
+[32m+[m[32m// 22892kb			368ms[m
+[32m+[m[32mpackage silver_14467;[m
+[32m+[m
+[32m+[m[32mimport java.io.BufferedReader;[m
+[32m+[m[32mimport java.io.FileInputStream;[m
+[32m+[m[32mimport java.io.IOException;[m
+[32m+[m[32mimport java.io.InputStreamReader;[m
+[32m+[m[32mimport java.util.StringTokenizer;[m
+[32m+[m
+[32m+[m[32mpublic class BOJ_14467_소가길을건너간이유1 {[m
+[32m+[m
+[32m+[m	[32mpublic static void main(String[] args) throws NumberFormatException, IOException {[m
+[32m+[m		[32mBufferedReader in = new BufferedReader(new InputStreamReader(System.in));[m
+[32m+[m		[32mint N = Integer.parseInt(in.readLine());[m
+[32m+[m		[32mint[] arr = new int[10];[m
+[32m+[m		[32mint[] arrLog = new int[10];[m
+[32m+[m		[32mint sum = 0;[m
+[32m+[m		[32mfor (int t = 0; t < N; t++) {[m
+[32m+[m			[32mStringTokenizer st = new StringTokenizer(in.readLine(), " ");[m
+[32m+[m			[32mint idx = Integer.parseInt(st.nextToken());[m
+[32m+[m			[32mint pos = Integer.parseInt(st.nextToken());[m[41m			[m
+[32m+[m			[32mif(arrLog[idx-1] > 0 && arr[idx-1] != pos)[m
+[32m+[m				[32msum += 1;[m
+[32m+[m			[32marr[idx-1] = pos;[m
+[32m+[m			[32marrLog[idx-1] += 1;[m
+[32m+[m		[32m}[m
+[32m+[m		[32mSystem.out.println(sum);[m
+[32m+[m	[32m}[m
+[32m+[m[32m}[m
